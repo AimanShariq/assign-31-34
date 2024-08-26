@@ -1,0 +1,265 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date and Time</title>
+</head>
+<body>
+      <!-- Question 1 -->
+
+    <div id="datetime"></div>
+
+    <script>
+        // Get the current timestamp
+        const timestamp = Date.now();
+
+        // Convert timestamp to a readable date and time format
+        const currentDate = new Date(timestamp);
+        const formattedDate = currentDate.toLocaleString();
+
+        // Display current date and time
+        document.getElementById("datetime").textContent = `Current Date and Time: ${formattedDate}`;
+    </script> -->
+       -->
+           <!-- Question 2 -->
+
+           <!-- <script>
+              // Create an array of month names
+              const months = [
+                  "January", "February", "March", "April", "May", "June",
+                  "July", "August", "September", "October", "November", "December"
+              ];
+      
+              // Get the current month (0-based index)
+              const currentDate = new Date();
+              const currentMonthIndex = currentDate.getMonth();
+      
+              // Get the month name from the array
+              const currentMonthName = months[currentMonthIndex];
+      
+              // Display the month name
+              alert(`Current month: ${currentMonthName}`);
+              </script> --> 
+
+               
+              <!-- Question 3 -->
+              <!-- <script>
+              // Get the current date
+              var today = new Date();
+              
+              // Get the day of the week (0-6, where 0 is Sunday and 6 is Saturday)
+              var day = today.getDay();
+              
+              // Array of day names
+              var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+              
+            // Display the first three letters of the current day
+            var abbreviatedDay = daylist[day].slice(0, 3);
+              alert("Today is: " + abbreviatedDay);
+              </script>        -->
+
+
+              
+       <!-- Question 4       
+
+    <script>
+        function checkDay() {
+            const today = new Date();
+            const dayOfWeek = today.getDay(); // 0 (Sunday) to 6 (Saturday)
+            
+            if (dayOfWeek === 0 || dayOfWeek === 6) {
+                document.getElementById("message").textContent = "It's Fun day!";
+            } 
+        }
+    </script>
+<body>
+    <h1>Is it Fun day</h1>
+    <p id="message"></p>
+</body> -->
+
+
+        
+        <!-- Question 5 -->
+
+    <!-- <script>
+        // Get the current date
+        const currentDate = new Date();
+
+        // Check if it's before the 16th day of the month
+        if (currentDate.getDate() < 16) {
+            document.write("First fifteen days of the month");
+        } else {
+            document.write("Last days of the month");
+        }
+    </script> -->
+
+ 
+    <!-- Question 6
+
+     <script>
+        var todayDate = new Date();
+var Todaymilli = todayDate.getTime();
+var todayMin = todayDate.getMinutes();
+var diff = Todaymilli - todayMin;
+var diffMin = diff / (1000 * 60 * 60);
+var accurateMin = Math.floor(diffMin);
+
+document.write("Current Date: " + todayDate);
+document.write("<br> Elapsed milliseconds since midnight, Jan 1, 1970: " + Todaymilli);
+document.write("<br> Elapsed minutes since midnight, Jan 1, 1970: " + accurateMin);
+
+     </script> -->
+
+     <!-- Question 7
+     <title>It's PM</title>
+     <script>
+                // Get the current date and time
+                var currentDate = new Date();
+                var hour = currentDate.getHours();
+        
+                // Check if it's before noon (AM) or after (PM)
+                if (hour < 12) {
+                    alert("It's AM");
+                } else {
+                    alert("It's PM");
+                }
+        </script> -->
+
+        
+        <!-- Question 8
+
+    <title>Last Day of Last Month</title>
+    <script>
+        // Create a Date object for January 1, 2021
+        const firstDayOfNextYear = new Date(2021, 0, 1);
+
+        // Subtract one day to get the last day of December 2020
+        firstDayOfNextYear.setDate(firstDayOfNextYear.getDate() - 1);
+
+        // Assign the result to the variable 'laterDate'
+        const laterDate = firstDayOfNextYear;
+
+        // Display the result (optional)
+        console.log("Last day of December 2020:", laterDate.toDateString());
+    </script> -->
+
+     
+     <!-- Question 9 
+
+
+    <title>Days Since 1st Ramadan</title>
+    <script>
+        // Define the starting date of Ramadan (June 18, 2015)
+        const ramadanStartDate = new Date('2015-06-18');
+
+        // Get the current date
+        const currentDate = new Date();
+
+        // Calculate the difference in milliseconds
+        const timeDifference = currentDate - ramadanStartDate;
+
+        // Convert milliseconds to days
+        const daysSinceRamadanStart = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        // Display the result
+        alert(`${daysSinceRamadanStart} days have passed since 1st Ramadan, 2015`);
+    </script> -->
+
+
+       <!-- Question 10
+    
+        <title>Elapsed Seconds</title>
+        <p id="elapsed-seconds"></p>
+    
+        <script>
+            // Get the current date
+            const currentDate = new Date();
+    
+            // Set the reference date (January 1, 2015)
+            const referenceDate = new Date('2015-01-01T00:00:00');
+    
+            // Calculate the elapsed time in seconds
+            const elapsedSeconds = Math.floor((currentDate - referenceDate) / 1000);
+    
+            // Display the elapsed seconds on the webpage
+            document.getElementById('elapsed-seconds').textContent = `On reference date January 1, 2015: ${elapsedSeconds} seconds had passed since beginning of 2015`;
+        </script> -->
+
+
+        <!-- Question 11 -->
+
+
+         <!-- <script>
+		setInterval(function() {
+			var currentDateTime = new Date();
+			document.getElementById("dateTime").innerHTML = currentDateTime.toLocaleString();
+		}, 1000);
+
+         </script> -->
+
+
+         <!-- Question 12 -->
+
+
+         <!-- <script>
+            var currentDate = new Date();
+		var year = currentDate.getFullYear() - 100;
+		currentDate.setFullYear(year);
+		alert("Date 100 years ago: " + currentDate.toLocaleDateString());
+         </script> -->
+
+         <!-- Question 13 -->
+
+<!-- <h1>Calculate Your Birth Year</h1>
+	<label for="age">Enter your age:</label>
+	<input type="number" id="age" />
+	<button onclick="calculateBirthYear()">Calculate</button>
+	<p id="birthYear"></p>
+
+	<script>
+		function calculateBirthYear() {
+			var age = document.getElementById("age").value;
+			var currentYear = new Date().getFullYear();
+			var birthYear = currentYear - age;
+			document.getElementById("birthYear").innerHTML = "Your birth year is: " + birthYear;
+		}
+	</script> -->
+
+    <!-- Question 14 -->
+
+<!-- <title>K-Electric Bill</title>
+	<h1>K-Electric Bill</h1>
+	<label for="customerName">Customer Name:</label>
+	<input type="text" id="customerName" />
+	<br>
+	<label for="units">Number of units:</label>
+	<input type="number" id="units" />
+	<br>
+	<button onclick="generateBill()">Generate Bill</button>
+	<div id="bill"></div>
+
+	<script>
+		function generateBill() {
+			var customerName = document.getElementById("customerName").value;
+			var units = document.getElementById("units").value;
+			var chargesPerUnit = 12.50;
+			var netAmount = (units * chargesPerUnit).toFixed(2);
+			var latePaymentSurcharge = (netAmount * 0.05).toFixed(2);
+			var grossAmount = (parseFloat(netAmount) + parseFloat(latePaymentSurcharge)).toFixed(2);
+			var currentMonth = new Date().toLocaleString('default', { month: 'long' }) + " " + new Date().getFullYear();
+
+			var bill = `
+				<h2>K-Electric Bill</h2>
+				<p>Customer Name: ${customerName}</p>
+				<p>Current Month: ${currentMonth}</p>
+				<p>Number of units: ${units}</p>
+				<p>Charges per unit: ${chargesPerUnit}</p>
+				<p>Net Amount Payable (within Due Date): ${netAmount}</p>
+				<p>Late Payment Surcharge: ${latePaymentSurcharge}</p>
+				<p>Gross Amount Payable (after Due Date): ${grossAmount}</p>
+			`;
+
+			document.getElementById("bill").innerHTML = bill;
+		}
+	</script> -->
+</body>
+</html>
